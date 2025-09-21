@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 void maxSubarraySum(int arr[],int n){
-    int maxSum=INT16_MIN;
+    int maxSum=INT_MIN;
     for(int start=0;start<n;start++){
         for(int end=start;end<n;end++){
             int currSum=0;
