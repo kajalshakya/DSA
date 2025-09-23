@@ -8,7 +8,7 @@ void maxSubarraySum(int arr[],int n){
             for(int i=start;i<=end;i++){
             currSum+=arr[i];
         }
-        cout<<currSum<<",";
+     cout<<currSum<<",";
         maxSum=max(maxSum,currSum);
         }
         cout<<endl;
