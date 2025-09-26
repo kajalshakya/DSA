@@ -4,6 +4,7 @@ using namespace std;
     //   Best Case (already sorted)   : O(n)
     //   Average Case                 : O(n^2)
     //   Worst Case (reverse sorted)  : O(n^2)
+    //   Stable, but many swaps
     void printArray(int arr[], int n){
         cout<<" sorted array :";
         for(int i=0; i<n; i++){
@@ -22,7 +23,7 @@ int insertionSort( int arr[], int n){
             j--;
         }
     }  printArray(arr, n);
-    cout<<" total swaps is ";
+    cout<<" total swaps are ";
     return swapCount;
     
 }
