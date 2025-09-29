@@ -1,21 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
-void maxProfit(int prices[],int n){
-    int minprice=INT_MAX;
-    int profit=0;
-    for(int i=0;i<n;i++){
-        if(prices[i]<minprice){
-            minprice=prices[i];
+int maxProfit(vector<int> &prices){
+    int minPrice=INT_MAX;
+    int profit =0;
+    for(int i=0 ;i<prices.size();i++){
+        if(prices[i]<minPrice){
+            minPrice=prices[i];
         }
-        else if(prices[i]-minprice>profit){
-            profit=prices[i]-minprice;
+        else if(prices[i]-minPrice>profit){
+            profit=prices[i]-minPrice;
         }
-    }cout<<"profit : "<<profit;
-    
+    } return profit;
 }
 int main(){
-    int prices[6]={7,1,5,3,6,4};
-    int n=sizeof(prices)/sizeof(int);
-    maxProfit(prices,n);
+  vector<int> prices = {7, 5, 4, 3, 2};
+    int result = maxProfit(prices);
+    cout << "Max Profit: " << result << endl;
+    
+    
     return 0;
 }
