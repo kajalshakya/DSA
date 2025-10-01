@@ -4,16 +4,24 @@ using namespace std;
 //space complexity :O(1)
 bool canBeEqualByOneSwap(const string &s1, const string &s2) {
     if (s1.length() != s2.length()) return false;
-    int swapCount=0;
+    int  diffCount=0, count1[26]={0}, count2[26]={0};
     for(int i=0;i<s1.length();i++){
         if(s1[i]!=s2[i]){
-            swapCount++;
+            count1[s1[i]-'a']++;
+            count2[s2[i]-'a']++;
+            diffCount++;
+            if(diffCount>2){
+                return false;
+            }
         }
-        if(swapCount>2){
-            return false;
         }
-    } return true;
-
+    for(int i=0;i<26;i++){
+            if(count1[i] != count2[i]) {
+                return false;
+            }
+        }
+  
+      return true;
 }
 
 int main() {
