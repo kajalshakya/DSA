@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -18,6 +17,13 @@ int secondMax(vector<int>& arr) {
 
 int main() {
     vector<int> arr = {3, 3, 1, 2, 5, 8, 7};
-    cout << secondMax(arr);
+    int second = secondMax(arr);
+
+    if (second == INT_MIN) {
+        cout << "Second max element does not exist";
+    } else {
+        cout << "Second max element is " << second;
+    }
+
     return 0;
 }
