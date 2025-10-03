@@ -4,21 +4,24 @@ using namespace std;
 bool isValidParentheses(string s) {
     stack<char> st;
     
-    for (char c : s) {
-        if (c == '(' || c == '{' || c == '[') {
-            st.push(c);
-        } else {
-            if (st.empty()) return false;
-            if ((c == ')' && st.top() != '(') ||
-                (c == '}' && st.top() != '{') ||
-                (c == ']' && st.top() != '['))
-                return false;
+   for(char ch:s){
+    if(ch=='(' || ch=='['|| ch=='{'){
+        st.push(ch);
+    }
+    else{
+        if(st.empty()){
+            return false;
+        }
+        else if(st.top()=='(' && ch==')' || st.top()=='[' && ch==']' || st.top()=='{' && ch=='}'){
             st.pop();
         }
+        else{
+            return false;
+        }
     }
-    
-    return st.empty();
+   } return st.empty();
 }
+
 
 int main() {
     string s = "{[()]}";
