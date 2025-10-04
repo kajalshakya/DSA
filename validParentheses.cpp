@@ -24,7 +24,7 @@ bool isValidParentheses(string s) {
 
 
 int main() {
-    string s = "{[()]}";
+    string s = "{[()gi]}";
     
     if (isValidParentheses(s)) {
         cout << "Valid parentheses\n";
