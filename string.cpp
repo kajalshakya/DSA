@@ -4,7 +4,7 @@ bool isPalindrome(char arr[],int n){
     int st=0,end=n-1;
     while(st,end){
         if(arr[st++]!= arr[end--]){
-            cout<<" not a palindrome ";
+            cout<<" not a palindrome ";tr
             return false;
         }
     }cout<< " it is a valid palindrome ";
