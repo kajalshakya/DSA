@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-//time complexity:O(N);
+//time complexity:O(N)
 //space complexity:O(1)
 int numberOfPoints(vector<vector<int>>& nums){
     unordered_set<int>s;
