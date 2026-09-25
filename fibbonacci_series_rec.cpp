@@ -9,7 +9,7 @@ void fib(int a, int b, int n)
 
 
 int main() {
-    int n=9;
+    int n=5;
     fib(0,1,n);
 }
     
